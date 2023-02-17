@@ -3,14 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.gordis.transactions.entities;
-
-import ch.qos.logback.core.status.Status;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import java.nio.channels.Channel;
-import java.util.Date;
+
 import lombok.Data;
 
 /**
@@ -25,10 +22,7 @@ public class transactions {
     private long id;
     private String reference;
     private String accountlban;
-    private Date date;
     private double amount;
     private double fee;
     private String description;
-    private Status status;
-    private Channel channel;
 }
