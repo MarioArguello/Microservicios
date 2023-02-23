@@ -4,12 +4,10 @@
     <groupId>com.gordis</groupId>
     <artifactId>paymentchainparent</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>paymentchainparent</name>
     <packaging>pom</packaging>
-    <modules>
-        <module>businessdomain</module>
-        <module>infraestructure</module>
-    </modules>
-   <properties>
+    
+    <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target> 
         <spring-boot.version>3.0.2</spring-boot.version>
@@ -28,7 +26,7 @@
                 <scope>import</scope>
             </dependency>
         </dependencies>
-    </dependencyManagement> 
+    </dependencyManagement>  
     <dependencies>
         <!--Gives us the ability to quickly setup and run services
         Property Defaults,Automatic Restart,Live Reload,Global Settings,Remote Applications for debug example via http--> 	
@@ -61,6 +59,10 @@
         <plugins>
             <!--Tghis plugin generate reports in two differents forma .txt and xml 
             in test phase when build life cicle is execuite-->
+            
+         
+            <!--It is the spring-boot repackage goal that repackages the JAR produced 
+            by maven to specify the main class and make it executable using an embedded container-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -69,8 +71,6 @@
                     <useSystemClassLoader>false</useSystemClassLoader>                    
                 </configuration>
             </plugin>
-            <!--It is the spring-boot repackage goal that repackages the JAR produced 
-            by maven to specify the main class and make it executable using an embedded container-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>     
@@ -122,7 +122,7 @@
                 </configuration> 
             </plugin>
             <!--generate project code documentation-->
-          <!--  <plugin>
+            <!--  <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.9</version>
@@ -138,8 +138,8 @@
                     </execution>
                 </executions>
             </plugin>-->
-               <!--generate maven site documentation-->
-          <!--  <plugin>
+            <!--generate maven site documentation-->
+            <!--  <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
                 <version>3.9.1</version>    
@@ -160,4 +160,8 @@
             </plugin>-->
         </plugins>
     </build>
+    <modules>
+        <module>businessdomain</module>
+        <module>infraestructure</module>
+    </modules>
 </project>
