@@ -9,6 +9,7 @@ import com.gordis.product.repository.productRepository;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -33,13 +34,14 @@ public class productRestController {
     }
     
     @GetMapping("/{id}")
-    public product get(@PathVariable String id) {
-        return null;
+    public product get(@PathVariable long id) {
+        return ProductRepository.findById(id).get();
     }
     
     @PutMapping("/{id}")
     public ResponseEntity<?> put(@PathVariable String id, @RequestBody product input) {
-        return null;
+       product save= ProductRepository.save(input);
+        return ResponseEntity.ok(save);
     }
     
     @PostMapping
@@ -49,8 +51,11 @@ public class productRestController {
     }
     
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> delete(@PathVariable String id) {
-        return null;
+    public ResponseEntity<?> delete(@PathVariable long id) {
+        Optional<product> FindById = ProductRepository.findById(id);
+        if(FindById.get() != null){
+            ProductRepository.delete(FindById.get());
+        }
+        return ResponseEntity.ok().build();
     }
-    
 }

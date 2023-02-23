@@ -1,4 +1,4 @@
-package com.gordis.customer;
+package com.paymentchain.customer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
