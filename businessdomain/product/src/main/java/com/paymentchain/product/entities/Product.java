@@ -1,8 +1,9 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
-package com.gordis.product.entities;
+package com.paymentchain.product.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,15 +13,16 @@ import lombok.Data;
 
 /**
  *
- * @author argue
+ * @author sotobotero
  */
 @Entity
 @Data
-public class product {
+public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String code;
     private String name;
-    
+
 }
