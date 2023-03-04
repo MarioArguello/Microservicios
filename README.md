@@ -36,3 +36,21 @@ Customer
 
 
 ![customer](https://user-images.githubusercontent.com/60244917/222873445-3eacbaf6-4e50-403d-85d9-9dba999dea94.PNG)
+
+
+
+
+
+Busqueda por codigo
+
+
+
+
+
+
+
+
+![busqueda por codigo cliente](https://user-images.githubusercontent.com/60244917/222873809-8ca41ff8-5ddc-468c-bacb-b0c953718feb.PNG)
+
+
+
